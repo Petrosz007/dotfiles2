@@ -13,9 +13,17 @@ chezmoi -v apply # Applies the version tracked by cheznoi, -v is verbose, shows 
 
 ## fish
 
-```fsh
-fisher-install-all
+```sh
+fisher-install-all # Installs all the fisher plugins
+fish_update_completions # Generates completions from manpages
 ```
+
+### Key Bindings
+
+| Key    | Description        |
+| Ctrl-T | fzf a file name    |
+| Ctrl-R | fzf history search |
+
 ### Plugins
 
 - https://github.com/jorgebucaran/fisher
