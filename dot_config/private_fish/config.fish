@@ -7,6 +7,9 @@ end
 
 #### Sourcing things
 bass source $HOME/.cargo/env
+if test -b $HOME/.config/fish/env.fish
+  source $HOME/.config/fish/env.fish
+end
 
 #### ENV VARS
 set -Ux EDITOR code
