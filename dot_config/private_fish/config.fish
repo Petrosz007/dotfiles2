@@ -12,7 +12,7 @@ if test -b $HOME/.config/fish/env.fish
 end
 
 #### ENV VARS
-set -Ux EDITOR vi
+set -gx EDITOR vi
 
 #### PATH
 fish_add_path /opt/homebrew/bin/
