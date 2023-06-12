@@ -1,0 +1,9 @@
+.vscode
+.bloop
+.metals
+.cpcache
+.lsp
+.DS_Store
+.clj-kondo/.cache/
+.calva/
+.nrepl-port
