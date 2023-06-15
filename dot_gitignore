@@ -1,9 +1,17 @@
-.vscode
-.bloop
-.metals
-.cpcache
-.lsp
-.DS_Store
+# Editor folders
+.vscode/
+.idea/
+
+# Scala editor folders
+.bloop/
+.metals/
+
+# Clojure editor folders and files
+.cpcache/
+.lsp/
 .clj-kondo/.cache/
 .calva/
 .nrepl-port
+
+# MacOS junk
+.DS_Store
