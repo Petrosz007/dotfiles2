@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+# When the contents of the 'Brewfile' file change, the hash changes, so this script will get executed
+# fish_plugins hash: {{ include "Brewfile.tmpl" | sha256sum }}
+cd ~
+brew bundle install

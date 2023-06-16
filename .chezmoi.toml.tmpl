@@ -1,0 +1,3 @@
+{{- $location := promptString "location (work or home)" -}}
+[data]
+  location = {{ $location | quote }}
