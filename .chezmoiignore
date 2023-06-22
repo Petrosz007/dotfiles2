@@ -1,2 +1,4 @@
-README.md
-.editorconfig
+/README.md
+/.editorconfig
+
+/.config/nvim/README.md
