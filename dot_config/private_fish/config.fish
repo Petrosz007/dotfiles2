@@ -6,16 +6,20 @@ if status is-interactive
 end
 
 #### Sourcing things
-if test -b $HOME/.cargo/env
+if test -e $HOME/.cargo/env
   bass source $HOME/.cargo/env
 end
 
-if test -b $HOME/.config/fish/env.fish
+if test -e $HOME/.config/fish/env.fish
   source $HOME/.config/fish/env.fish
 end
 
 #### ENV VARS
 set -gx EDITOR nvim
+
+#### ALIASES
+alias vim="nvim"
+alias fish-config-reload="source $HOME/.config/fish/config.fish"
 
 #### PATH
 fish_add_path /opt/homebrew/bin/
