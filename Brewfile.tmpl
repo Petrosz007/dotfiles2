@@ -22,7 +22,7 @@ brew "helm"
 brew "jq"
 brew "just"
 brew "kubernetes-cli"
-brew "kubectx"
+brew "krew"
 brew "neovide"
 brew "nushell"
 brew "python@3.10"
@@ -65,6 +65,10 @@ brew "tfenv"
 brew "tflint"
 brew "checkov"
 brew "pre-commit"
+{{- end }}
+
+{{- if eq .location "home" }}
+brew "go"
 {{- end }}
 
 # Casks
