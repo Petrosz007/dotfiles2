@@ -20,6 +20,7 @@ set -gx EDITOR nvim
 #### ALIASES
 alias vim="nvim"
 alias fish-config-reload="source $HOME/.config/fish/config.fish"
+alias k="kubectl"
 
 #### PATH
 fish_add_path /opt/homebrew/bin/
