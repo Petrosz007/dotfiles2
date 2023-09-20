@@ -5,12 +5,14 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "oven-sh/bun"
 {{- if eq .location "work" }}
 tap "wp/inf", "git@github.dev.pages:infrastructure/homebrew-wp-inf.git"
 {{- end }}
 
 
 # Brew installs
+brew "bun"
 brew "chezmoi"
 brew "coreutils"
 brew "curl"
@@ -65,6 +67,8 @@ brew "tfenv"
 brew "tflint"
 brew "checkov"
 brew "pre-commit"
+brew "prometheus"
+brew "cdk8s"
 {{- end }}
 
 {{- if eq .location "home" }}
