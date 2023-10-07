@@ -81,6 +81,11 @@ cask "iterm2"
 cask "jetbrains-toolbox"
 cask "logseq"
 cask "raycast"
-cask "mouse-fix"
+cask "mac-mouse-fix"
 cask "postman"
 cask "dash"
+cask "amethyst"
+
+{{- if eq .location "home" }}
+cask "calibre"
+{{- end }}
