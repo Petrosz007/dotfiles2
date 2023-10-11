@@ -2,9 +2,7 @@
 tap "borkdude/brew"
 tap "harelba/q"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "oven-sh/bun"
 {{- if eq .location "work" }}
 tap "wp/inf", "git@github.dev.pages:infrastructure/homebrew-wp-inf.git"
@@ -68,7 +66,7 @@ brew "tflint"
 brew "checkov"
 brew "pre-commit"
 brew "prometheus"
-brew "cdk8s"
+brew "datree" # Kubernetes manifest linting
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -79,12 +77,12 @@ brew "go"
 cask "docker"
 cask "iterm2"
 cask "jetbrains-toolbox"
-cask "logseq"
 cask "raycast"
 cask "mac-mouse-fix"
 cask "postman"
 cask "dash"
 cask "amethyst"
+cask "obsidian"
 
 {{- if eq .location "home" }}
 cask "calibre"
