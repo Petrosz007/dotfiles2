@@ -72,6 +72,7 @@ brew "datree" # Kubernetes manifest linting
 
 {{- if eq .location "home" }}
 brew "go"
+brew "syncthing"
 {{- end }}
 
 # Casks
@@ -87,4 +88,5 @@ cask "obsidian"
 
 {{- if eq .location "home" }}
 cask "calibre"
+cask "musicbrainz-picard"
 {{- end }}

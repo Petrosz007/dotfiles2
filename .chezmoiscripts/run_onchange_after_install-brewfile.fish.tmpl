@@ -4,3 +4,8 @@
 # Brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
 cd ~
 brew bundle install
+
+{{- if eq .location "home" }}
+# Configure to run syncthing at login and in the background
+brew services start syncthing
+{{- end }}
