@@ -10,7 +10,7 @@ tap "wp/inf", "git@github.dev.pages:infrastructure/homebrew-wp-inf.git"
 
 
 # Brew installs
-brew "bun"
+brew "bun"        # Javascript runtime, Node.JS alternative
 brew "chezmoi"
 brew "coreutils"
 brew "curl"
@@ -18,19 +18,25 @@ brew "fish"
 brew "fzf"
 brew "gh"
 brew "git"
-brew "helm"
 brew "jq"
 brew "just"
-brew "kubernetes-cli"
-brew "krew"
 brew "neovide"
 brew "nushell"
-brew "python@3.10"
 brew "ranger"
 brew "ripgrep"
-brew "rustup-init"
 brew "tmux"
 brew "wget"
+
+# Toolchain management
+brew "rustup-init"  # Rust
+brew "asdf"         # Python
+brew "pipx"         # Pyhton apps
+
+# Kubernetes
+brew "krew"
+brew "kubernetes-cli"
+brew "helm"
+
 
 {{- if eq .location "work" }}
 ## Work installs
@@ -87,6 +93,6 @@ cask "amethyst"
 cask "obsidian"
 
 {{- if eq .location "home" }}
-cask "calibre"
+# cask "calibre"
 cask "musicbrainz-picard"
 {{- end }}

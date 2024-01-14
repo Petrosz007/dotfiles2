@@ -27,3 +27,4 @@ fish_add_path /opt/homebrew/bin/
 fish_add_path (yarn global bin)
 fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
 fish_add_path $HOME/.krew/bin
+fish_add_path $HOME/.local/bin # pipx
