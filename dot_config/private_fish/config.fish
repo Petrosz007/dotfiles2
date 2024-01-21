@@ -14,6 +14,10 @@ if test -e $HOME/.config/fish/env.fish
   source $HOME/.config/fish/env.fish
 end
 
+if test -e /opt/homebrew/opt/asdf/libexec/asdf.fish
+  source /opt/homebrew/opt/asdf/libexec/asdf.fish
+end
+
 #### ENV VARS
 set -gx EDITOR nvim
 
@@ -24,7 +28,7 @@ alias k="kubectl"
 
 #### PATH
 fish_add_path /opt/homebrew/bin/
-fish_add_path (yarn global bin)
+fish_add_path $HOME/.yarn/bin # Got his path from: (yarn global bin)
 fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
 fish_add_path $HOME/.krew/bin
 fish_add_path $HOME/.local/bin # pipx

@@ -22,7 +22,7 @@ brew "jq"
 brew "just"
 brew "neovide"
 brew "nushell"
-brew "ranger"
+brew "lf"           # Terminal file manager
 brew "ripgrep"
 brew "tmux"
 brew "wget"
@@ -36,7 +36,7 @@ brew "pipx"         # Pyhton apps
 brew "krew"
 brew "kubernetes-cli"
 brew "helm"
-
+brew "k9s"
 
 {{- if eq .location "work" }}
 ## Work installs
@@ -73,7 +73,6 @@ brew "tflint"
 brew "checkov"
 brew "pre-commit"
 brew "prometheus"
-brew "datree" # Kubernetes manifest linting
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -89,7 +88,6 @@ cask "raycast"
 cask "mac-mouse-fix"
 cask "postman"
 cask "dash"
-cask "amethyst"
 cask "obsidian"
 
 {{- if eq .location "home" }}

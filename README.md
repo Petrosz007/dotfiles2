@@ -68,3 +68,7 @@ Install CascadiaCode from https://github.com/microsoft/cascadia-code/releases
 
 - https://reckoning.dev/blog/fish-shell/
 - https://www.chezmoi.io/
+
+## Installed Tools
+
+- [lf](https://github.com/gokcehan/lf): Terminal file manager
