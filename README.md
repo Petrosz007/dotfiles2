@@ -55,11 +55,18 @@ If you want to install a new fish plugin, add it to the `dot_config/private_fish
 ### Plugins
 
 - https://github.com/jorgebucaran/fisher
-- https://github.com/ilancosman/tide
 - https://github.com/edc/bass
 - https://github.com/reitzig/sdkman-for-fish
-- https://github.com/FabioAntunes/fish-nvm
 - https://github.com/jethrokuan/fzf
+
+### Profiling fish startup time
+
+https://stackoverflow.com/questions/63290042/how-can-i-profile-the-fish-shell-init
+
+```sh
+fish --profile-startup /tmp/fish.profile -i -c exit
+sort -nk2 /tmp/fish.profile
+```
 
 ## Fonts
 Install CascadiaCode from https://github.com/microsoft/cascadia-code/releases  
