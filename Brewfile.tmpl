@@ -78,6 +78,7 @@ brew "prometheus"
 {{- end }}
 
 {{- if eq .location "home" }}
+## Home installs
 brew "go"
 brew "syncthing"
 {{- end }}
@@ -94,6 +95,8 @@ cask "obsidian"             # Note taking app
 cask "orion"                # WebKit based web browser
 
 {{- if eq .location "home" }}
+## Home Casks
 # cask "calibre"
 cask "musicbrainz-picard"
+cask "audacity"
 {{- end }}
