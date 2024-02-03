@@ -26,6 +26,7 @@ brew "lf"           # Terminal file manager
 brew "ripgrep"
 brew "tmux"
 brew "starship"     # Shell prompt
+brew "zellij"       # Terminal multiplexer
 brew "wget"
 
 # Toolchain management
@@ -88,8 +89,9 @@ cask "jetbrains-toolbox"
 cask "raycast"
 cask "mac-mouse-fix"
 cask "postman"
-cask "dash"
-cask "obsidian"
+cask "dash"                 # Documentation browser
+cask "obsidian"             # Note taking app
+cask "orion"                # WebKit based web browser
 
 {{- if eq .location "home" }}
 # cask "calibre"
