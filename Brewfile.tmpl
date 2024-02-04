@@ -81,6 +81,7 @@ brew "prometheus"
 ## Home installs
 brew "go"
 brew "syncthing"
+brew "opus-tools"
 {{- end }}
 
 # Casks
@@ -97,6 +98,6 @@ cask "orion"                # WebKit based web browser
 {{- if eq .location "home" }}
 ## Home Casks
 # cask "calibre"
-cask "musicbrainz-picard"
+cask "musicbrainz-picard"   # Music tagger and organiser
 cask "audacity"
 {{- end }}
