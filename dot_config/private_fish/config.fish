@@ -6,6 +6,10 @@ if status is-interactive
 
   # Starship is the shell prompt
   starship init fish | source
+
+  # Abbreviations
+  abbr --add pcd project-cd
+  abbr --add k kubectl
 end
 
 #### Sourcing things
@@ -23,7 +27,6 @@ set -gx EDITOR nvim
 #### ALIASES
 alias vim="nvim"
 alias fish-config-reload="source $HOME/.config/fish/config.fish"
-alias k="kubectl"
 
 #### PATH
 fish_add_path /opt/homebrew/bin/

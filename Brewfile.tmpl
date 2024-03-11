@@ -95,6 +95,11 @@ cask "dash"                 # Documentation browser
 cask "obsidian"             # Note taking app
 cask "orion"                # WebKit based web browser
 
+{{- if eq .location "work" }}
+## Work Casks
+cask "citrix-workspace"
+{{- end }}
+
 {{- if eq .location "home" }}
 ## Home Casks
 # cask "calibre"

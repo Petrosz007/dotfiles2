@@ -33,6 +33,8 @@ unset __conda_setup
 
 # Add yarn global tools to path
 export PATH="$(yarn global bin):$PATH"
+# Add nix profile to path
+export PATH="$HOME/.nix-profile/bin:$PATH"
 . "$HOME/.cargo/env"
 
 eval $(/opt/homebrew/bin/brew shellenv)
