@@ -83,6 +83,9 @@ brew "postgresql"
 brew "go"
 brew "syncthing"
 brew "opus-tools"
+brew "yt-dlp"
+brew "imagemagick"
+brew "hledger"              # Plain text accounting
 {{- end }}
 
 # Casks
@@ -103,7 +106,7 @@ cask "citrix-workspace"
 
 {{- if eq .location "home" }}
 ## Home Casks
-# cask "calibre"
+cask "calibre"
 cask "musicbrainz-picard"   # Music tagger and organiser
 cask "audacity"
 {{- end }}

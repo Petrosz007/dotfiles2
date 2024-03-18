@@ -10,6 +10,7 @@ if status is-interactive
   # Abbreviations
   abbr --add pcd project-cd
   abbr --add k kubectl
+  abbr --add yt-dlp-audio yt-dlp -f 'bestaudio[ext=m4a],bestaudio[ext=webm]' -x --audio-quality 0 --embed-metadata --embed-thumbnail --cookies-from-browser chrom
 end
 
 #### Sourcing things

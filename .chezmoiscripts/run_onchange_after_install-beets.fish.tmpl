@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+{{ if eq .location "home" }}
+pipx install -q beets
+pipx inject -q beets requests
+
+# Generate fish completions
+beet fish
+{{ end }}

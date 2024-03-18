@@ -1,0 +1,29 @@
+directory: ~/Music/petis_awesome_music
+library: ~/Music/beets_petis_awesome_music.db
+
+import:
+  copy: yes
+  write: yes
+
+ui:
+  color: yes
+
+plugins: fish fetchart spotify info duplicates convert embedart
+
+fetchart:
+  high_resolution: yes
+  cautious: true
+
+spotify:
+  source_weight: 0.7
+
+convert:
+  dest: ~/Music/petis_awesome_exported_aacs
+  copy_album_art: yes
+  format: m4a
+  formats:
+    m4a: ffmpeg -i $source -c:a aac_at -b:a 128K -c:v mjpeg -filter:v scale=600x600 $dest
+  no_convert: format:MP3
+
+embedart:
+  maxwidth: 600
