@@ -3,9 +3,41 @@
 
 add_newline = false
 
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$nix_shell\
+$memory_usage\
+$env_var\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell\
+$character"""
+
+
 [git_status]
 ahead = '⇡${count}'
 diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
 modified = '!${count}'
 staged = '+${count}'
+
+[kubernetes]
+disabled = true
