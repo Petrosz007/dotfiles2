@@ -29,3 +29,14 @@ for node_version in "21.6.0"
 end
 
 asdf global nodejs "21.6.0"
+
+
+##############
+### Go
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+
+for go_version in "1.22.1"
+  asdf install golang $go_version
+end
+
+asdf global golang "1.22.1"

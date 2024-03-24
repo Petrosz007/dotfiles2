@@ -80,12 +80,12 @@ brew "postgresql"
 
 {{- if eq .location "home" }}
 ## Home installs
-brew "go"
 brew "syncthing"
 brew "opus-tools"
 brew "yt-dlp"
 brew "imagemagick"
 brew "hledger"              # Plain text accounting
+brew "typst"                # Type setting app like LaTeX
 {{- end }}
 
 # Casks
@@ -109,4 +109,5 @@ cask "citrix-workspace"
 cask "calibre"
 cask "musicbrainz-picard"   # Music tagger and organiser
 cask "audacity"
+cask "lastfm"
 {{- end }}

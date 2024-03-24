@@ -71,6 +71,14 @@ sort -nk2 /tmp/fish.profile
 ## Fonts
 Install CascadiaCode from https://github.com/microsoft/cascadia-code/releases  
 
+## Brew
+
+```sh
+cd ~
+# List brew installs which are not present in the Brewfile
+brew bundle cleanup
+```
+
 ### Resources
 
 - https://reckoning.dev/blog/fish-shell/

@@ -36,3 +36,4 @@ fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
 fish_add_path $HOME/.krew/bin
 fish_add_path $HOME/.local/bin # pipx
 fish_add_path $HOME/.cargo/env
+fish_add_path $HOME/.nix-profile/bin/
