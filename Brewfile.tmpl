@@ -28,6 +28,7 @@ brew "tmux"
 brew "starship"     # Shell prompt
 brew "zellij"       # Terminal multiplexer
 brew "wget"
+brew "difftastic"   # Structural code diffs
 
 # Toolchain management
 brew "rustup-init"  # Rust
@@ -102,6 +103,7 @@ cask "orion"                # WebKit based web browser
 {{- if eq .location "work" }}
 ## Work Casks
 cask "citrix-workspace"
+cask "beekeeper-studio"
 {{- end }}
 
 {{- if eq .location "home" }}
