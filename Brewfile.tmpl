@@ -7,6 +7,9 @@ tap "oven-sh/bun"
 {{- if eq .location "work" }}
 tap "wp/inf", "git@github.dev.pages:infrastructure/homebrew-wp-inf.git"
 {{- end }}
+{{- if eq .location "home" }}
+tap "d12frosted/emacs-plus"
+{{- end }}
 
 
 # Brew installs
@@ -87,6 +90,7 @@ brew "yt-dlp"
 brew "imagemagick"
 brew "hledger"              # Plain text accounting
 brew "typst"                # Type setting app like LaTeX
+brew "emacs-plus@29"
 {{- end }}
 
 # Casks
