@@ -4,12 +4,6 @@ tap "harelba/q"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "oven-sh/bun"
-{{- if eq .location "work" }}
-tap "wp/inf", "git@github.dev.pages:infrastructure/homebrew-wp-inf.git"
-{{- end }}
-{{- if eq .location "home" }}
-tap "d12frosted/emacs-plus"
-{{- end }}
 
 
 # Brew installs
@@ -23,15 +17,16 @@ brew "gh"
 brew "git"
 brew "jq"
 brew "just"
-brew "neovide"
 brew "nushell"
-brew "lf"           # Terminal file manager
+brew "ranger"       # Terminal file manager
 brew "ripgrep"
 brew "tmux"
 brew "starship"     # Shell prompt
 brew "zellij"       # Terminal multiplexer
 brew "wget"
 brew "difftastic"   # Structural code diffs
+brew "htop"         # Process manager
+brew "tree"         # Tree view of the current directory
 
 # Toolchain management
 brew "rustup-init"  # Rust
@@ -46,8 +41,6 @@ brew "k9s"
 
 {{- if eq .location "work" }}
 ## Work installs
-brew "wp/inf/kubectl-import"
-
 brew "awscli"
 brew "argocd"
 brew "lastpass-cli"
@@ -103,6 +96,8 @@ cask "postman"
 cask "dash"                 # Documentation browser
 cask "obsidian"             # Note taking app
 cask "orion"                # WebKit based web browser
+cask "neovide"              # Neovim GUI
+cask "spotify"              # Music
 
 {{- if eq .location "work" }}
 ## Work Casks
