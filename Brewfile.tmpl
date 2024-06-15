@@ -83,7 +83,6 @@ brew "yt-dlp"
 brew "imagemagick"
 brew "hledger"              # Plain text accounting
 brew "typst"                # Type setting app like LaTeX
-brew "emacs-plus@29"
 {{- end }}
 
 # Casks
@@ -93,16 +92,15 @@ cask "jetbrains-toolbox"
 cask "raycast"
 cask "mac-mouse-fix"
 cask "postman"
-cask "dash"                 # Documentation browser
 cask "obsidian"             # Note taking app
-cask "orion"                # WebKit based web browser
 cask "neovide"              # Neovim GUI
 cask "spotify"              # Music
+cask "beekeeper-studio"     # SQL explorer
 
 {{- if eq .location "work" }}
 ## Work Casks
 cask "citrix-workspace"
-cask "beekeeper-studio"
+
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -111,4 +109,6 @@ cask "calibre"
 cask "musicbrainz-picard"   # Music tagger and organiser
 cask "audacity"
 cask "lastfm"
+cask "zed"                  # Editor
+cask "paragon-ntfs"         # Support for NTFS external hdds on MacOS
 {{- end }}
