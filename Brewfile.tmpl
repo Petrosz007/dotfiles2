@@ -67,12 +67,14 @@ brew "pandoc"
 brew "stern"
 brew "tig"
 brew "Virtuslab/scala-cli/scala-cli"
+brew "coursier/formulas/coursier"     # Needed for nvim-metals for scala
 brew "tfenv"
 brew "tflint"
 brew "checkov"
 brew "pre-commit"
 brew "prometheus"
 brew "postgresql"
+brew "bruno"          # Postman alternative
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -90,7 +92,7 @@ cask "docker"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "raycast"
-cask "mac-mouse-fix"
+cask "mac-mouse-fix@2"
 cask "postman"
 cask "obsidian"             # Note taking app
 cask "neovide"              # Neovim GUI
