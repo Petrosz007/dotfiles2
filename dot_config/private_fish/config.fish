@@ -24,6 +24,7 @@ end
 
 #### ENV VARS
 set -gx EDITOR nvim
+set -Ux PYENV_ROOT $HOME/.pyenv
 
 #### ALIASES
 alias vim="nvim"
@@ -33,7 +34,8 @@ alias fish-config-reload="source $HOME/.config/fish/config.fish"
 fish_add_path /opt/homebrew/bin/
 fish_add_path $HOME/.yarn/bin # Got his path from: (yarn global bin)
 fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
-fish_add_path $HOME/.krew/bin
-fish_add_path $HOME/.local/bin # pipx
-fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.krew/bin   # krew
+fish_add_path $HOME/.local/bin  # pipx
+fish_add_path $PYENV_ROOT/bin   # pyenv
+fish_add_path $HOME/.cargo/bin  # cargo
 fish_add_path $HOME/.nix-profile/bin/

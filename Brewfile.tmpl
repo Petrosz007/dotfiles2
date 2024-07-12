@@ -3,11 +3,9 @@ tap "borkdude/brew"
 tap "harelba/q"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
-tap "oven-sh/bun"
 
 
 # Brew installs
-brew "bun"        # Javascript runtime, Node.JS alternative
 brew "chezmoi"
 brew "coreutils"
 brew "curl"
@@ -41,12 +39,24 @@ brew "k9s"
 
 {{- if eq .location "work" }}
 ## Work installs
-brew "awscli"
-brew "argocd"
-brew "lastpass-cli"
+### Clojure
 brew "clojure"
 brew "borkdude/brew/babashka"
 brew "borkdude/brew/clj-kondo"
+
+### JS
+brew "yarn"
+
+### Scala
+brew "Virtuslab/scala-cli/scala-cli"
+brew "coursier/formulas/coursier"     # Needed for nvim-metals for scala
+
+### Python
+brew "pyenv"
+
+brew "awscli"
+brew "argocd"
+brew "lastpass-cli"
 brew "jmeter"
 brew "redis"
 brew "sops"
@@ -54,7 +64,6 @@ brew "chronograf"
 brew "openldap"
 brew "p7zip"
 brew "xsv"
-brew "yarn"
 brew "harelba/q/q"
 brew "k6"
 brew "expect"
@@ -66,15 +75,12 @@ brew "git-delta"
 brew "pandoc"
 brew "stern"
 brew "tig"
-brew "Virtuslab/scala-cli/scala-cli"
-brew "coursier/formulas/coursier"     # Needed for nvim-metals for scala
 brew "tfenv"
 brew "tflint"
 brew "checkov"
 brew "pre-commit"
 brew "prometheus"
 brew "postgresql"
-brew "bruno"          # Postman alternative
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -102,6 +108,7 @@ cask "beekeeper-studio"     # SQL explorer
 {{- if eq .location "work" }}
 ## Work Casks
 cask "citrix-workspace"
+cask "bruno"          # Postman alternative
 
 {{- end }}
 
