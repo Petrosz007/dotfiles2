@@ -81,6 +81,7 @@ brew "checkov"
 brew "pre-commit"
 brew "prometheus"
 brew "postgresql"
+brew "shellcheck"     # Linter for shell files
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -105,6 +106,7 @@ cask "obsidian"             # Note taking app
 cask "neovide"              # Neovim GUI
 cask "spotify"              # Music
 cask "beekeeper-studio"     # SQL explorer
+cask "alacritty"            # Terminal emulator
 
 {{- if eq .location "work" }}
 ## Work Casks

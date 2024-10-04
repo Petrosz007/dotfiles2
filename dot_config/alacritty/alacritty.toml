@@ -1,0 +1,9 @@
+[window]
+title = "Hacker Mode: Activated"
+
+[font]
+normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
+size = 12
+
+[cursor]
+style.shape = "Beam"
