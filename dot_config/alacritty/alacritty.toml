@@ -1,5 +1,6 @@
 [window]
 title = "Hacker Mode: Activated"
+option_as_alt = "Both"
 
 [font]
 normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
