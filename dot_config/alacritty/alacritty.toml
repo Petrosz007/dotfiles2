@@ -8,3 +8,14 @@ size = 12
 
 [cursor]
 style.shape = "Beam"
+
+[keyboard]
+bindings = [
+  # These two are handled by Fish shell for me
+  # { key = "Left",  mods = "Alt",     chars = "\u001bB"       }, # Skip word left
+  # { key = "Right", mods = "Alt",     chars = "\u001bF"       }, # Skip word right
+  { key = "Left",  mods = "Command", chars = "\u001bOH"      }, # Home
+  { key = "Right", mods = "Command", chars =  "\u001bOF"     }, # End
+  { key = "Back",  mods = "Command", chars = "\u0015"        }, # Delete line
+  { key = "Back",  mods = "Alt",     chars = "\u001b\u007f"  }, # Delete word
+]
