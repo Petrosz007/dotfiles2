@@ -1,3 +1,16 @@
-{{- $location := promptString "location (work or home)" -}}
+{{- $location_types := list "work" "home" -}}
+{{- $location := promptChoice "location" $location_types -}}
 [data]
   location = {{ $location | quote }}
+
+[data.git]
+{{- if eq $location "work" }}
+name = "Peter Andi"
+email = "Peter.Andi@ekata.com"
+{{- else }}
+name = "Andi Péter"
+email = "andipeti2000@gmail.com"
+{{- end }}
+
+[diff]
+command = "difft"
