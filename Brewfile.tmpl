@@ -128,3 +128,12 @@ cask "burn"                 # CD/DVD Burner
 cask "ente-auth"            # 2FA
 cask "balenaetcher"         # Bootable pendrive ISO writer
 {{- end }}
+
+{{- if eq .location "home" }}
+## NTFS support for macOS
+tap "gromgit/fuse"
+
+cask "macfuse"
+brew "gromgit/fuse/ntfs-3g-mac"
+cask "mounty"
+{{- end }}
