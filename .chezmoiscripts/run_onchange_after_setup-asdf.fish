@@ -30,6 +30,10 @@ end
 
 asdf global nodejs "21.6.0"
 
+# Enable Node.js package managers (Yarn)
+corepack enable
+asdf reshim nodejs
+
 
 ##############
 ### Go
