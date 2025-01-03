@@ -92,7 +92,6 @@ brew "yt-dlp"
 brew "imagemagick"
 brew "hledger"              # Plain text accounting
 brew "typst"                # Type setting app like LaTeX
-brew "hugo"                 # Statis site generator
 {{- end }}
 
 # Casks
@@ -112,8 +111,7 @@ cask "zen-browser"          # Firefox fork browser
 {{- if eq .location "work" }}
 ## Work Casks
 cask "citrix-workspace"
-cask "bruno"          # Postman alternative
-
+cask "bruno"                # Postman alternative
 {{- end }}
 
 {{- if eq .location "home" }}

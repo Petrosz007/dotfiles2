@@ -29,6 +29,7 @@ set -Ux PYENV_ROOT $HOME/.pyenv
 #### ALIASES
 alias vim="nvim"
 alias fish-config-reload="source $HOME/.config/fish/config.fish"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale" # Will only work if tailscale is installed
 
 #### PATH
 fish_add_path /opt/homebrew/bin/
