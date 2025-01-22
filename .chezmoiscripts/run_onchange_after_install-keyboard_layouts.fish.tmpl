@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+{{- $keyboardLayoutPath := joinPath .chezmoi.sourceDir "keyboard_layouts" "colemak-dh-wide-macos-iso.keylayout" -}}
+
+# When the contents of the keyboard layout file change, the hash changes, so this script will get executed
+# Keyboatd layout hash: {{ include $keyboardLayoutPath | sha256sum }}
+sudo --prompt "Sudo for copying the keyboard layout: " cp {{ $keyboardLayoutPath | quote }} "/Library/Keyboard Layouts/"

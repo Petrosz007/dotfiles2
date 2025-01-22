@@ -16,6 +16,19 @@ chezmoi diff # Shows the diff of the files in chezmoi vs the home dir
 chezmoi -v apply # Applies the version tracked by cheznoi, -v is verbose, shows the diff
 ```
 
+## MacOS keyboard layouts
+
+ukelele is used for creating keyboard layouts, like [private_Library/colemak-dh-wide-macos-iso.keylayout](private_Library/colemak-dh-wide-macos-iso.keylayout)
+
+Follow these steps to install and enable the .keylayout files:
+
+1. Copy .keylayout files to /Library or ~/Library
+2. Enable the .keylayout files:
+    - macOS 10.10 and later: System Preferences > Keyboard > Input Sources
+    - macOS 10.6 to 10.9: System Preferences > Language & Text > Input Sources
+    - macOS 10.5 and earlier: System Preferences > International > Input
+
+
 ## fish
 
 ### Set fish as the default shell
