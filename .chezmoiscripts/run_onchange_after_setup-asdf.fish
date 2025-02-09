@@ -9,7 +9,7 @@ for python_version in "3.13.1"
   asdf install python $python_version
 end
 
-asdf global python "3.13.1"
+asdf set -u python "3.13.1"
 
 # Install python apps
 for app in "poetry" "black" "isort" "flake8"
@@ -28,7 +28,7 @@ for node_version in "23.5.0"
   asdf install nodejs $node_version
 end
 
-asdf global nodejs "23.5.0"
+asdf set -u nodejs "23.5.0"
 
 # Enable Node.js package managers (Yarn)
 corepack enable
@@ -43,7 +43,7 @@ for go_version in "1.23.4"
   asdf install golang $go_version
 end
 
-asdf global golang "1.23.4"
+asdf set -u golang "1.23.4"
 
 
 ##############
@@ -54,4 +54,4 @@ for deno_version in "2.1.9"
   asdf install deno $deno_version
 end
 
-asdf global deno "2.1.9"
+asdf set -u deno "2.1.9"
