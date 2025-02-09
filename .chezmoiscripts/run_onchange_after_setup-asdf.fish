@@ -44,3 +44,14 @@ for go_version in "1.23.4"
 end
 
 asdf global golang "1.23.4"
+
+
+##############
+### Deno
+asdf plugin add deno https://github.com/asdf-community/asdf-deno.git
+
+for deno_version in "2.1.9"
+  asdf install deno $deno_version
+end
+
+asdf global deno "2.1.9"
