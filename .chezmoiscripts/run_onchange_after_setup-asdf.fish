@@ -24,11 +24,11 @@ poetry config virtualenvs.in-project true
 # Install Node.js
 asdf plugin-add nodejs
 
-for node_version in "23.5.0"
+for node_version in "23.6.1"
   asdf install nodejs $node_version
 end
 
-asdf set -u nodejs "23.5.0"
+asdf set -u nodejs "23.6.1"
 
 # Enable Node.js package managers (Yarn)
 corepack enable
