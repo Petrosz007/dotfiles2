@@ -7,6 +7,9 @@ if status is-interactive
   # Starship is the shell prompt
   starship init fish | source
 
+  # JJ completions are only needed in interactive mode
+  jj util completion fish | source
+
   # Abbreviations
   abbr --add pcd project-cd
   abbr --add k kubectl
