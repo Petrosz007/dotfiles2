@@ -16,6 +16,16 @@ chezmoi diff # Shows the diff of the files in chezmoi vs the home dir
 chezmoi -v apply # Applies the version tracked by cheznoi, -v is verbose, shows the diff
 ```
 
+The scripts in `.chezmoiscripts` are (supposed to be) idempotent scripts, that help you with command execution. In this repo I use it to call `brew`, `asdf`, and install things.
+
+The `run_onchange_after_` prefix means:
+- `run` this as a script
+- `onchange` specifies that this should only be re-run on `chezmoi apply`s when the content of the file has changed
+  - In the brew install we want to run the script when the content of the `Brewfile` has changed, so we add the hash of the `Brewfile` into a comment in that file, so changing the `Brewfile` triggers the `onchange`
+- Run this `after` chezmoi has copied the files
+
+Important: The scripts (`after` scripts in this case) will be run in alphabetical order. But there might be dependencies between the scripts, first we need to brew install a tool that we use in a further script. Prefixing them with `00`, `10` can help create that run order. These are two digits, because there might be a script in the future, which we need between them, and it can be `05`.
+
 ## MacOS keyboard layouts
 
 ukelele is used for creating keyboard layouts, like [private_Library/colemak-dh-wide-macos-iso.keylayout](private_Library/colemak-dh-wide-macos-iso.keylayout)
@@ -45,17 +55,16 @@ And then
 chsh -s /opt/homebrew/bin/fish
 ```
 
-```sh
-# Install fisher
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+If you `chezmoi apply` now, the `.chezmoiscripts/run_onchange_after_fisher-plugins.fish.tmpl` script should install fisher and the necessary plugins for you.
 
-fisher update # Installs all the fisher plugins
+Sometimes you need to update the automatically generated completions:
+```sh
 fish_update_completions # Generates completions from manpages
 ```
 
 ### Installing a new fish plugin
 
-If you want to install a new fish plugin, add it to the `dot_config/private_fish/fish_plugins` file. When you do `chezmoi apply`, it'll run the `.chezmoiscripts/run_onchange_install-fisher-plugins.fish.tmpl` script, which'll call `fisher update`, which will install and update all the plugins in the `fish_plugins` file.
+If you want to install a new fish plugin, add it to the `dot_config/private_fish/fish_plugins` file. When you do `chezmoi apply`, it'll run the `.chezmoiscripts/run_onchange_fisher-plugins.fish.tmpl` script, which'll call `fisher update`, which will install and update all the plugins in the `fish_plugins` file.
 
 
 ### Key Bindings

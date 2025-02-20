@@ -38,6 +38,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale" # Will on
 fish_add_path /opt/homebrew/bin/
 fish_add_path $HOME/.yarn/bin # Got his path from: (yarn global bin)
 fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
+fish_add_path $HOME/.asdf/shims # asdf
 fish_add_path $HOME/.krew/bin   # krew
 fish_add_path $HOME/.local/bin  # pipx
 fish_add_path $PYENV_ROOT/bin   # pyenv
