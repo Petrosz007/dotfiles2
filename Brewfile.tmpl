@@ -2,12 +2,14 @@
 tap "borkdude/brew"
 tap "harelba/q"
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
+tap "d12frosted/emacs-plus"
+tap "hashicorp/tap"
 
 
 # Brew installs
 brew "chezmoi"
 brew "coreutils"
+brew "cmake"
 brew "curl"
 brew "fish"
 brew "fzf"
@@ -26,6 +28,9 @@ brew "difftastic"   # Structural code diffs
 brew "htop"         # Process manager
 brew "tree"         # Tree view of the current directory
 brew "jj"           # Jujutsu version control system
+brew "gpg"          # Signing things
+brew "fd"
+brew "bat"          # cat, but cool
 
 # Toolchain management
 brew "rustup-init"  # Rust
@@ -40,49 +45,21 @@ brew "k9s"
 
 {{- if eq .location "work" }}
 ## Work installs
-### Clojure
-brew "clojure"
-brew "borkdude/brew/babashka"
-brew "borkdude/brew/clj-kondo"
 
 ### JS
 brew "yarn"
-
-### Scala
-brew "Virtuslab/scala-cli/scala-cli"
-brew "coursier/formulas/coursier"     # Needed for nvim-metals for scala
 
 ### Python
 brew "pyenv"
 
 brew "awscli"
 brew "argocd"
-brew "lastpass-cli"
-brew "jmeter"
-brew "redis"
-brew "sops"
-brew "chronograf"
-brew "openldap"
-brew "p7zip"
 brew "xsv"
-brew "harelba/q/q"
-brew "k6"
-brew "expect"
 brew "hadolint"
-brew "gnu-getopt"
-brew "ghostscript"
-brew "git-crypt"
-brew "git-delta"
-brew "pandoc"
-brew "stern"
-brew "tig"
 brew "tfenv"
 brew "tflint"
-brew "checkov"
-brew "pre-commit"
-brew "prometheus"
-brew "postgresql"
 brew "shellcheck"     # Linter for shell files
+brew "emacs-plus@30"  # Emacs <3
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -100,12 +77,11 @@ brew "zig"
 # Casks
 cask "docker"
 cask "iterm2"
-cask "jetbrains-toolbox"
 cask "raycast"
 cask "mac-mouse-fix@2"
 cask "postman"
+cask "bitwarden"
 cask "obsidian"             # Note taking app
-cask "zotero"               # Citation and reference manager
 cask "neovide"              # Neovim GUI
 cask "spotify"              # Music
 cask "beekeeper-studio"     # SQL explorer
@@ -115,8 +91,9 @@ cask "ukelele"              # Custom keyboard layouts on macOS
 
 {{- if eq .location "work" }}
 ## Work Casks
-cask "citrix-workspace"
-cask "bruno"                # Postman alternative
+cask "google-cloud-sdk"
+cask "hashicorp/tap/hashicorp-vagrant"  # Virtual Machines go brrrr
+cask "virtualbox"                       # Virtual Machines go brrrr
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -130,6 +107,8 @@ cask "paragon-ntfs"         # Support for NTFS external hdds on MacOS
 cask "burn"                 # CD/DVD Burner
 cask "ente-auth"            # 2FA
 cask "balenaetcher"         # Bootable pendrive ISO writer
+cask "jetbrains-toolbox"
+cask "zotero"               # Citation and reference manager
 cask "anki"                 # Flashcard app
 {{- end }}
 
@@ -140,4 +119,16 @@ tap "gromgit/fuse"
 cask "macfuse"
 brew "gromgit/fuse/ntfs-3g-mac"
 cask "mounty"
+{{- end }}
+
+{{- if eq .location "work" }}
+## Axoflow
+tap "garden-io/garden"
+
+brew "minikube"   # Local mini kubernetes
+brew "rsync"      # rsync 3.1+ is not installed on macos by default
+brew "step"
+cask "google-cloud-sdk"
+brew "garden-io/garden/garden-cli@0.12"
+
 {{- end }}

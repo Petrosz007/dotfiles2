@@ -39,11 +39,11 @@ asdf reshim nodejs
 ### Go
 asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
 
-for go_version in "1.23.4"
+for go_version in "1.23.3" "1.23.4"
   asdf install golang $go_version
 end
 
-asdf set -u golang "1.23.4"
+asdf set -u golang "1.23.3"
 
 
 ##############

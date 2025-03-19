@@ -14,6 +14,10 @@ if status is-interactive
   abbr --add pcd project-cd
   abbr --add k kubectl
   abbr --add yt-dlp-audio yt-dlp -f 'bestaudio[ext=m4a],bestaudio[ext=webm]' -x --audio-quality 0 --embed-metadata --embed-thumbnail --cookies-from-browser chrome
+
+  {{- if eq .location "work" }}
+  abbr --add kcp $HOME/code/axoflow/etc/scripts/kcp-kubectl.sh
+  {{- end}}
 end
 
 #### Sourcing things
@@ -37,7 +41,11 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale" # Will on
 #### PATH
 fish_add_path /opt/homebrew/bin/
 fish_add_path $HOME/.yarn/bin # Got his path from: (yarn global bin)
-fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
+
+if type -q sdk
+  fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
+end
+
 fish_add_path $HOME/.asdf/shims # asdf
 fish_add_path $HOME/.krew/bin   # krew
 fish_add_path $HOME/.local/bin  # pipx

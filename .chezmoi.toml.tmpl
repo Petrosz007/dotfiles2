@@ -6,10 +6,12 @@
 [data.git]
 {{- if eq $location "work" }}
 name = "Peter Andi"
-email = "Peter.Andi@ekata.com"
+email = "peter.andi@axoflow.com"
+sshSigningKeyPath = "~/.ssh/id_ed25519.pub"
 {{- else }}
 name = "Andi Péter"
 email = "andipeti2000@gmail.com"
+sshSigningKeyPath = "~/.ssh/id_ed25519.pub"
 {{- end }}
 
 [diff]

@@ -1,9 +1,54 @@
 [user]
 	name = {{ .git.name }}
 	email = {{ .git.email }}
+  {{- if eq .location "work" }}
+  signingkey = {{ .git.sshSigningKeyPath }}
+  {{- end }}
 
 [alias]
   # Difftastic aliases, so `git dlog` is `git log` with difftastic and so on.
   dlog = -c diff.external=difft log --ext-diff
   dshow = -c diff.external=difft show --ext-diff
   ddiff = -c diff.external=difft diff
+
+[branch]
+  sort = -committerdate
+
+[column]
+  ui = auto
+
+[core]
+  fsmonitor = true
+
+[init]
+  defaultBranch = main
+
+[merge]
+  conflictstyle = zdiff3
+
+[pull]
+  rebase = true
+
+[rebase]
+  autoSquash = true   # Automatically squash commits with the starting message of fixup! squash! amend! 
+  autoStash = true
+  updateRefs = true
+
+# Helps when merging into feature branches and resolving the same merge conflicts over and over again
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[tag]
+  sort = version:refname
+
+{{- if eq .location "work" }}
+[gpg]
+  format = ssh
+
+[commit]
+  gpgsign = true
+
+[tag]
+  gpgSign = true
+{{- end }}
