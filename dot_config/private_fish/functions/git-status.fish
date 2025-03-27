@@ -39,3 +39,4 @@ function git-status --description 'git status -s'
   end
 end
 # git status -s | fzf --preview="[ '??' = {1} ] && bat --color=always {2} || git ddiff {2}"
+# code (git status -s | fzf --preview="[ '??' = {1} ] && bat --color=always {2} || git ddiff {2}" | awk -F ' ' '{ print $2 }')

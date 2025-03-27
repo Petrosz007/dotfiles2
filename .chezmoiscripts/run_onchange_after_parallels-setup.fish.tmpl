@@ -1,0 +1,6 @@
+#/usr/bin/env fish
+
+{{- if eq .location "work" }}
+echo "Setting up Vagrant with Parallels"
+vagrant plugin install vagrant-parallels
+{{- end }}

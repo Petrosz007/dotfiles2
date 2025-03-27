@@ -60,6 +60,8 @@ brew "tfenv"
 brew "tflint"
 brew "shellcheck"     # Linter for shell files
 brew "emacs-plus@30"  # Emacs <3
+brew "golangcli-ling" # linting in go, duh
+brew socat            # Netcat like network manipulation thingy
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -94,6 +96,7 @@ cask "ukelele"              # Custom keyboard layouts on macOS
 cask "google-cloud-sdk"
 cask "hashicorp/tap/hashicorp-vagrant"  # Virtual Machines go brrrr
 cask "virtualbox"                       # Virtual Machines go brrrr
+cask "parallels"                        # Windows Virtual Machines go brrrrr
 {{- end }}
 
 {{- if eq .location "home" }}
