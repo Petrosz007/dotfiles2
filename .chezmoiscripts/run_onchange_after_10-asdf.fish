@@ -2,7 +2,7 @@
 
 ############
 ### Python
-asdf plugin-add python
+asdf plugin add python
 
 # Install python versions
 for python_version in "3.13.1"
@@ -22,7 +22,7 @@ poetry config virtualenvs.in-project true
 ##############
 ### Node.js
 # Install Node.js
-asdf plugin-add nodejs
+asdf plugin add nodejs
 
 for node_version in "23.6.1"
   asdf install nodejs $node_version

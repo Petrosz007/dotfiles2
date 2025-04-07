@@ -1,6 +1,12 @@
-#/usr/bin/env fish
+#!/usr/bin/env fish
 
 {{- if eq .location "work" }}
-echo "Setting up Vagrant with Parallels"
-vagrant plugin install vagrant-parallels
+set --local installed_plugins (vagrant plugin list | awk -F ' ' '{ print $1 }')
+
+for plugin in "vagrant-parallels"
+  if not contains $plugin $installed_plugins
+    echo "Installing vagrant plugin $plugin"
+    vagrant plugin install $plugin
+  end
+end
 {{- end }}

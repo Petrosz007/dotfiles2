@@ -60,8 +60,8 @@ brew "tfenv"
 brew "tflint"
 brew "shellcheck"     # Linter for shell files
 brew "emacs-plus@30"  # Emacs <3
-brew "golangcli-ling" # linting in go, duh
-brew socat            # Netcat like network manipulation thingy
+brew "golangci-lint" # linting in go, duh
+brew "socat"            # Netcat like network manipulation thingy
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -95,7 +95,6 @@ cask "ukelele"              # Custom keyboard layouts on macOS
 ## Work Casks
 cask "google-cloud-sdk"
 cask "hashicorp/tap/hashicorp-vagrant"  # Virtual Machines go brrrr
-cask "virtualbox"                       # Virtual Machines go brrrr
 cask "parallels"                        # Windows Virtual Machines go brrrrr
 {{- end }}
 
@@ -113,6 +112,7 @@ cask "balenaetcher"         # Bootable pendrive ISO writer
 cask "jetbrains-toolbox"
 cask "zotero"               # Citation and reference manager
 cask "anki"                 # Flashcard app
+cask "jordanbaird-ice"      # MacOS status bar hide icons
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -132,6 +132,6 @@ brew "minikube"   # Local mini kubernetes
 brew "rsync"      # rsync 3.1+ is not installed on macos by default
 brew "step"
 cask "google-cloud-sdk"
-brew "garden-io/garden/garden-cli@0.12"
+brew "garden-io/garden/garden-cli"
 
 {{- end }}
