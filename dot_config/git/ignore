@@ -1,6 +1,7 @@
 # Editor folders
 .vscode/
 .idea/
+.zed/
 
 # Scala editor folders
 .bloop/

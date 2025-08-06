@@ -11,10 +11,15 @@ key = {{ .git.sshSigningKeyPath | quote }}
 
 [git]
 sign-on-push = true
+write-change-id-header = true
 
 [aliases]
 # Pulls the latest bookmark to the current change
 tug = ["bookmark", "move", "--from", "heads(::@ & bookmarks())", "--to", "@"]
+
+[ui]
+pager = "delta"
+diff-formatter = ":git"
 
 [ui.movement]
 # `jj next` and `jj prev` will automatically edit the change

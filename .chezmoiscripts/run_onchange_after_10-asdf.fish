@@ -5,11 +5,12 @@
 asdf plugin add python
 
 # Install python versions
-for python_version in "3.13.1"
+for python_version in "3.13.2"
   asdf install python $python_version
 end
 
 asdf set -u python "3.13.1"
+asdf reshim python
 
 # Install python apps
 for app in "poetry" "black" "isort" "flake8"
@@ -39,11 +40,12 @@ asdf reshim nodejs
 ### Go
 asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
 
-for go_version in "1.23.3" "1.23.4"
+for go_version in "1.23.4" "1.24.3"
   asdf install golang $go_version
 end
 
-asdf set -u golang "1.23.3"
+asdf set -u golang "1.24.3"
+asdf reshim golang
 
 
 ##############
@@ -55,3 +57,4 @@ for deno_version in "2.1.9"
 end
 
 asdf set -u deno "2.1.9"
+asdf reshim deno
