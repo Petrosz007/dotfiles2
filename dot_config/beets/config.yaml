@@ -8,7 +8,7 @@ import:
 ui:
   color: yes
 
-plugins: edit fish fetchart spotify info duplicates convert embedart
+plugins: convert edit embedart fish fetchart info inline spotify duplicates
 
 fetchart:
   high_resolution: yes
