@@ -1,0 +1,18 @@
+// !!!!! NOTE !!!!!!
+// Only edit this in Chezmoi, or else it might get overwritten
+// Or propagate the changes back to chezmoi
+
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j k": "vim::SwitchToNormalMode"
+    }
+  }
+]
