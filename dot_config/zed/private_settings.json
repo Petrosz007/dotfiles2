@@ -1,0 +1,41 @@
+// !!!!! NOTE !!!!!!
+// Only edit this in Chezmoi, or else it might get overwritten
+// Or propagate the changes back to chezmoi
+
+{
+  "project_panel": {
+    "dock": "right"
+  },
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+
+  // Style
+  "ui_font_family": "Cascadia Code PL",
+  "ui_font_size": 13,
+  "buffer_font_size": 12,
+  "buffer_font_family": "CaskaydiaCove Nerd Font Mono",
+  "theme": {
+    "mode": "system",
+    "light": "Arrakis Day",
+    "dark": "One Dark"
+  },
+  "icon_theme": "Catppuccin Latte",
+  "minimap": {
+    "show": "always"
+  },
+
+  // Disable Zed features
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "agent": {
+    "enabled": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "disable_ai": true
+}
+
+// TODO:
+// highlight todo comment lines
