@@ -40,4 +40,4 @@ modified = '!${count}'
 staged = '+${count}'
 
 [kubernetes]
-disabled = true
+disabled = false
