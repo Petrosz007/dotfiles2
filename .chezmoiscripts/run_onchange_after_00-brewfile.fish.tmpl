@@ -5,7 +5,11 @@
 cd ~
 brew bundle install
 
+{{- /* Commenting this out, because I don't need synthing anymore
+
 {{- if eq .location "home" }}
 # Configure to run syncthing at login and in the background
 brew services start syncthing
 {{- end }}
+
+*/ -}}

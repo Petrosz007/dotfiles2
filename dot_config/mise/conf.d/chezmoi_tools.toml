@@ -1,0 +1,17 @@
+[tools]
+# Javascript
+node = { version = "23.6.1", postinstall = "corepack enable" }
+deno = "2.1.9"
+
+# Python
+python = "3.13.2"
+"pipx:poetry" = { version = "latest", postinstall = "poetry config virtualenvs.in-project true" }
+"pipx:black" = "latest"
+"pipx:isort" = "latest"
+"pipx:flake8" = "latest"
+
+# Go
+golang = "1.24.3"
+
+# Lua
+lua-language-server = "latest"
