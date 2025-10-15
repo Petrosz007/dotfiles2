@@ -1,3 +1,6 @@
+[settings]
+go_default_packages_file = "~/.config/mise/default-go-packages"
+
 [tools]
 # Javascript
 node = { version = "23.6.1", postinstall = "corepack enable" }
@@ -12,6 +15,7 @@ python = "3.13.2"
 
 # Go
 golang = "1.24.3"
+golangci-lint-langserver = "0.0.11"
 
 # Lua
 lua-language-server = "latest"
