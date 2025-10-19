@@ -18,7 +18,7 @@ brew "git"
 brew "jq"
 brew "just"
 brew "nushell"
-brew "ranger"       # Terminal file manager
+brew "yazi"         # Terminal file manager
 brew "ripgrep"
 brew "tmux"
 brew "starship"     # Shell prompt
@@ -33,7 +33,10 @@ brew "gpg"          # Signing things
 brew "fd"
 brew "bat"          # cat, but cool
 brew "eza"          # ls, but cool
+brew "fd"           # find, but cool
 brew "watch"        # Periodically execute commands
+brew "helix"        # Editor
+brew "nvim"         # Editor
 
 # Toolchain management
 brew "rustup-init"  # Rust
@@ -63,8 +66,7 @@ brew "hadolint"
 brew "tfenv"
 brew "tflint"
 brew "shellcheck"     # Linter for shell files
-brew "golangci-lint" # linting in go, duh
-brew "socat"            # Netcat like network manipulation thingy
+brew "socat"          # Netcat like network manipulation thingy
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -80,19 +82,19 @@ brew "zig"
 {{- end }}
 
 # Casks
-cask "docker"
+cask "docker-desktop"
 cask "iterm2"
 cask "raycast"
 cask "mac-mouse-fix@2"
 cask "postman"
 cask "bitwarden"
 cask "obsidian"             # Note taking app
-cask "neovide"              # Neovim GUI
+cask "neovide-app"          # Neovim GUI
 cask "spotify"              # Music
 cask "beekeeper-studio"     # SQL explorer
 cask "alacritty"            # Terminal emulator
 cask "wezterm"              # Terminal emulator
-cask "zen-browser"          # Firefox fork browser
+cask "zen"                  # Firefox fork browser
 cask "ukelele"              # Custom keyboard layouts on macOS
 
 {{- if eq .location "work" }}
@@ -117,7 +119,8 @@ cask "balenaetcher"         # Bootable pendrive ISO writer
 cask "jetbrains-toolbox"
 cask "zotero"               # Citation and reference manager
 cask "anki"                 # Flashcard app
-cask "jordanbaird-ice@beta"      # MacOS status bar hide icons
+# TODO: Change this to non-beta, after a release which works on macos26 tahoe
+cask "jordanbaird-ice@beta" # MacOS status bar hide icons
 {{- end }}
 
 {{- if eq .location "home" }}

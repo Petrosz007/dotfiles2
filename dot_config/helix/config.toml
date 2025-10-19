@@ -1,0 +1,4 @@
+theme = "gruvbox"
+
+[keys.insert]
+j = { k = "normal_mode" } # jk to exit insert mode to normal mode
