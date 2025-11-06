@@ -187,6 +187,11 @@ keybinds {
         // bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
         // bind "Alt j" "Alt Down" { MoveFocus "Down"; }
         // bind "Alt k" "Alt Up" { MoveFocus "Up"; }
+        unbind "Alt Left"
+        unbind "Alt Right"
+        unbind "Alt Down"
+        unbind "Alt Up"
+
         bind "Alt h" { MoveFocusOrTab "Left"; }
         bind "Alt l" { MoveFocusOrTab "Right"; }
         bind "Alt j" { MoveFocus "Down"; }

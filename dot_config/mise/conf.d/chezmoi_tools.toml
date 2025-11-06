@@ -14,7 +14,7 @@ python = "3.13.2"
 "pipx:flake8" = "latest"
 
 # Go
-golang = "1.24.3"
+golang = [ "1.25.0", "1.25.3" ]
 golangci-lint-langserver = "0.0.11"
 
 # Lua
