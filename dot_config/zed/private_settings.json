@@ -3,6 +3,35 @@
 // Or propagate the changes back to chezmoi
 
 {
+  "ssh_connections": [
+    {
+      "host": "dominica",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/petrosz/server-config2"
+          ]
+        },
+        {
+          "paths": [
+            "/home/petrosz/server-config2/nixos/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "trinidad",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/petrosz/server-config2"
+          ]
+        }
+      ]
+    }
+  ],
   "project_panel": {
     "dock": "right"
   },
