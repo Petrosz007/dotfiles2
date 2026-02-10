@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
 # When the contents of the `chezmoi_tools.toml` file change, tha hash changes, so this script will get executed
-# chezmoi_tools hash: {{ include "dot_config/mise/conf.d/chezmoi_tools.toml" | sha256sum }}
+# chezmoi_tools hash: {{ include "dot_config/mise/conf.d/chezmoi_tools.toml.tmpl" | sha256sum }}
 # default-go-packages hash: {{ include "dot_config/mise/default-go-packages" | sha256sum }}
 mise install

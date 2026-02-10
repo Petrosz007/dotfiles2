@@ -3,6 +3,9 @@
 // Or propagate the changes back to chezmoi
 
 {
+  "edit_predictions": {
+    "provider": "none"
+  },
   "ssh_connections": [
     {
       "host": "dominica",
@@ -48,9 +51,6 @@
   },
 
   // Disable Zed features
-  "features": {
-    "edit_prediction_provider": "none"
-  },
   "agent": {
     "enabled": false
   },

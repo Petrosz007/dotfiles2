@@ -3,19 +3,33 @@ go_default_packages_file = "~/.config/mise/default-go-packages"
 
 [tools]
 # Javascript
-node = { version = "23.6.1", postinstall = "corepack enable" }
-deno = "2.5.6"
+node = "25.6.0"
+deno = "2.6.8"
 
 # Python
-python = "3.13.2"
+python = "3.14.3"
+uv = "latest"
 "pipx:poetry" = { version = "latest", postinstall = "poetry config virtualenvs.in-project true" }
 "pipx:black" = "latest"
 "pipx:isort" = "latest"
 "pipx:flake8" = "latest"
 
 # Go
-golang = [ "1.25.0", "1.25.5" ]
+golang = [ "1.25.0", "1.25.7" ]
 golangci-lint-langserver = "0.0.11"
 
 # Lua
 lua-language-server = "latest"
+
+{{- if eq .location "work" }}
+# Axoflow
+kubectl = "latest"
+stern = "latest"      # k8s log viewer
+krew = "latest"       # kubectl package manager
+k9s = "latest"        # k8s tui
+{{- end }}
+
+{{- if eq .location "home" }}
+# Home installs
+zig = "0.15.2"
+{{- end }}

@@ -15,10 +15,13 @@ brew "fish"
 brew "fzf"
 brew "gh"
 brew "git"
-brew "jq"
+brew "jq"           # Json manipulator
+brew "yq"           # Yaml manipulator
 brew "just"
 brew "nushell"
-brew "yazi"         # Terminal file manager
+brew "rsync"        # rsync 3.1+ is not installed on macos by default
+brew "ranger"       # TUI file manager
+brew "yazi"         # TUI file manager
 brew "ripgrep"
 brew "tmux"
 brew "starship"     # Shell prompt
@@ -38,28 +41,20 @@ brew "watch"        # Periodically execute commands
 brew "helix"        # Editor
 brew "nvim"         # Editor
 brew "fastfetch"    # Neofetch, shows system info
+brew "dua-cli"      # Disk Usage Analyser (windirstat but for tui)
+brew "qemu"         # Emulate stuff
+brew "graphviz"     # Graph drawing from text
 
 # Toolchain management
 brew "rustup-init"  # Rust
 brew "mise"         # Toolchain management
 brew "pipx"         # Pyhton apps
 
-# Kubernetes
-brew "krew"
-brew "kubernetes-cli"
-brew "helm"
-brew "k9s"
-brew "stern"
-
 {{- if eq .location "work" }}
 ## Work installs
 
 ### JS
 brew "yarn"
-
-### Python
-brew "pyenv"
-brew "uv"
 
 brew "awscli"
 brew "argocd"
@@ -79,8 +74,6 @@ brew "yt-dlp"
 brew "imagemagick"
 brew "hledger"              # Plain text accounting
 brew "typst"                # Type setting app like LaTeX
-brew "uv"                   # Python package manager
-brew "zig"
 {{- end }}
 
 # Casks
@@ -90,18 +83,28 @@ cask "raycast"
 cask "mac-mouse-fix@2"
 cask "postman"
 cask "bitwarden"
-cask "obsidian"             # Note taking app
+cask "zed"                  # Editor
+cask "visual-studio-code"   # Editor
 cask "neovide-app"          # Neovim GUI
+cask "obsidian"             # Note taking app
 cask "spotify"              # Music
 cask "beekeeper-studio"     # SQL explorer
 cask "alacritty"            # Terminal emulator
+cask "ghostty"              # Terminal emulator
 cask "wezterm"              # Terminal emulator
 cask "zen"                  # Firefox fork browser
+cask "firefox"              # Browser (for testing)
+cask "google-chrome"        # Browser (for testing)
 cask "ukelele"              # Custom keyboard layouts on macOS
+
+# TODO: Change this to non-beta, after a release which works on macos26 tahoe
+cask "jordanbaird-ice@beta" # MacOS status bar hide icons
+cask "rectangle"            # Window management
 
 {{- if eq .location "work" }}
 ## Work Casks
-cask "google-cloud-sdk"
+cask "slack"
+cask "gcloud-cli"
 cask "hashicorp/tap/hashicorp-vagrant"  # Virtual Machines go brrrr
 cask "parallels"                        # Windows Virtual Machines go brrrrr
 cask "google-drive"                     # Sync those obsidian notes
@@ -113,7 +116,6 @@ cask "calibre"
 cask "musicbrainz-picard"   # Music tagger and organiser
 cask "audacity"
 cask "lastfm"
-cask "zed"                  # Editor
 cask "paragon-ntfs"         # Support for NTFS external hdds on MacOS
 cask "burn"                 # CD/DVD Burner
 cask "ente-auth"            # 2FA
@@ -122,8 +124,6 @@ cask "jetbrains-toolbox"
 cask "zotero"               # Citation and reference manager
 cask "anki"                 # Flashcard app
 cask "backuploupe"          # Time Machine backup debug/browser
-# TODO: Change this to non-beta, after a release which works on macos26 tahoe
-cask "jordanbaird-ice@beta" # MacOS status bar hide icons
 {{- end }}
 
 {{- if eq .location "home" }}
@@ -133,16 +133,4 @@ tap "gromgit/fuse"
 cask "macfuse"
 brew "gromgit/fuse/ntfs-3g-mac"
 cask "mounty"
-{{- end }}
-
-{{- if eq .location "work" }}
-## Axoflow
-tap "garden-io/garden"
-
-brew "minikube"   # Local mini kubernetes
-brew "rsync"      # rsync 3.1+ is not installed on macos by default
-brew "step"
-cask "google-cloud-sdk"
-brew "garden-io/garden/garden-cli"
-
 {{- end }}

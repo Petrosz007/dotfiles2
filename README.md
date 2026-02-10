@@ -91,7 +91,7 @@ sort -nk2 /tmp/fish.profile
 ```
 
 ## Fonts
-Install CascadiaCode from https://github.com/microsoft/cascadia-code/releases  
+Open the [`./fonts/`](./fonts/) folder and install all the fonts there.
 
 ## Brew
 
@@ -99,6 +99,14 @@ Install CascadiaCode from https://github.com/microsoft/cascadia-code/releases
 cd ~
 # List brew installs which are not present in the Brewfile
 brew bundle cleanup
+```
+
+## Mise
+
+```sh
+mise install    # Install all things specified for mise
+mise outdated   # For tools specified with `latest` show if they have newer versions
+mise upgrade    # Upgrade tools whose version is `latest`
 ```
 
 ### Resources

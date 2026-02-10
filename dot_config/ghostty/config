@@ -1,6 +1,5 @@
-font-family = CaskaydiaCove Nerd Font Mono
+font-family = Maple Mono NF
 theme = Arrakis Day
 
 # Keybinds
 keybind = global:cmd+backquote=toggle_quick_terminal
-
