@@ -16,6 +16,19 @@ write-change-id-header = true
 [aliases]
 # Pulls the latest bookmark to the current change
 tug = ["bookmark", "move", "--from", "heads(::@ & bookmarks())", "--to", "@"]
+view-pr = ["util", "exec", "--", "bash", "-c", """
+set -euo pipefail
+output=$(jj log -T 'commit_id ++ "\n"' --no-graph $@)
+if [ $(echo "$output" | wc -l) -gt 1 ]; then
+    echo "Error: Matched more than one commit with revset selector. view-pr can only be used with a single commit" >&2
+    exit 1
+fi
+if [ -z $(echo "$output") ]; then
+    echo "Error: No revisions matched by revset selector" >&2
+    exit 1
+fi
+gh pr list --search $output --state all --json number | jq '.[].number' -r | xargs -- gh pr view --web
+""", ""]
 
 [ui]
 pager = "delta"
