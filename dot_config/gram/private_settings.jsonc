@@ -12,6 +12,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 
 {
+  "use_autoclose": true,
   "relative_line_numbers": "disabled",
   "lsp": {
     "yaml-language-server": {
