@@ -1,0 +1,81 @@
+// !!!!! NOTE !!!!!!
+// Only edit this in Chezmoi, or else it might get overwritten
+// Or propagate the changes back to chezmoi
+
+// Gram settings
+//
+// For information on how to configure Gram, see the Gram
+// documentation: gram://docs/configuring-gram
+//
+// To see all of Gram's default settings without changing your
+// custom settings, run `gram: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+
+{
+  "relative_line_numbers": "disabled",
+  "lsp": {
+    "yaml-language-server": {
+      "binary": {
+        "allow_binary_download": false
+      },
+      "enable_lsp_tasks": true
+    },
+    "json-language-server": {
+      "binary": {
+        "allow_binary_download": true,
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "ssh_connections": [
+    {
+      "host": "dominica",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/petrosz/server-config2"],
+        },
+        {
+          "paths": ["/home/petrosz/server-config2/nixos/./"],
+        },
+      ],
+    },
+    {
+      "host": "trinidad",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/petrosz/server-config2"],
+        },
+      ],
+    },
+  ],
+  "project_panel": {
+    "folder_icons": true,
+    "file_icons": true,
+    "dock": "right",
+  },
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": false,
+  },
+
+  // Style
+  "ui_font_family": "Maple Mono NF",
+  "ui_font_size": 13,
+  "buffer_font_family": "Maple Mono NF",
+  "buffer_font_size": 12,
+  "theme": {
+    "mode": "system",
+    "light": "Arrakis Day",
+    "dark": "One Dark",
+  },
+  "icon_theme": "Catppuccin Latte",
+  "minimap": {
+    "show": "always",
+  },
+}
+
+// TODO:
+// highlight todo comment lines
