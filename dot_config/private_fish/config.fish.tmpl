@@ -48,6 +48,10 @@ end
 set -gx EDITOR nvim
 set -Ux PYENV_ROOT $HOME/.pyenv
 
+if test -e ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+  set -x SSH_AUTH_SOCK ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+end
+
 #### ALIASES
 alias vim="nvim"
 alias fish-config-reload="source $HOME/.config/fish/config.fish"

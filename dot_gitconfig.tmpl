@@ -30,7 +30,7 @@
   rebase = true
 
 [rebase]
-  autoSquash = true   # Automatically squash commits with the starting message of fixup! squash! amend! 
+  autoSquash = true   # Automatically squash commits with the starting message of fixup! squash! amend!
   autoStash = true
   updateRefs = true
 
@@ -45,6 +45,9 @@
 {{- if eq .location "work" }}
 [gpg]
   format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.gitallowedsigners
 
 [commit]
   gpgsign = true

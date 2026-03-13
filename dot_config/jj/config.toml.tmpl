@@ -8,6 +8,7 @@ email = {{ .git.email | quote }}
 behavior = "own"
 backend = "ssh"
 key = {{ .git.sshSigningKeyPath | quote }}
+backends.ssh.allowed-signers = "~/.gitallowedsigners"
 
 [git]
 sign-on-push = true

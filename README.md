@@ -39,6 +39,12 @@ Follow these steps to install and enable the .keylayout files:
     - macOS 10.5 and earlier: System Preferences > International > Input
 
 
+## Git signing
+
+Use Secretive to setup a new SSH key.
+
+Add the public key to `~/.gitallowedsigners`.
+
 ## fish
 
 ### Set fish as the default shell
