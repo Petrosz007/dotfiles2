@@ -16,7 +16,7 @@ write-change-id-header = true
 
 [aliases]
 # Pulls the latest bookmark to the current change
-tug = ["bookmark", "move", "--from", "heads(::@ & bookmarks())", "--to", "@"]
+tug = ["bookmark", "advance"]
 view-pr = ["util", "exec", "--", "bash", "-c", """
 set -euo pipefail
 output=$(jj log -T 'commit_id ++ "\n"' --no-graph $@)
