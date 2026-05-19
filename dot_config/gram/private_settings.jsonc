@@ -12,20 +12,33 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 
 {
+  "title_bar": {
+    "show_branch_name": false,
+    "show_branch_icon": false
+  },
+  "status_bar": {
+    "show": true
+  },
+  "outline_panel": {
+    "git_status": true
+  },
+  "git_panel": {
+    "button": true
+  },
   "show_completions_on_input": true,
   "indent_guides": {
     "background_coloring": "disabled",
     "active_line_width": 1,
     "line_width": 1,
-    "enabled": true
+    "enabled": true,
   },
   "toolbar": {
-    "code_actions": false
+    "code_actions": false,
   },
   "autosave": "on_focus_change",
   "lsp_document_colors": "inlay",
   "inlay_hints": {
-    "enabled": false
+    "show_background": false,
   },
   "show_signature_help_after_edits": false,
   "auto_signature_help": false,
@@ -34,9 +47,9 @@
   "lsp": {
     "yaml-language-server": {
       "binary": {
-        "allow_binary_download": false
+        "allow_binary_download": false,
       },
-      "enable_lsp_tasks": true
+      "enable_lsp_tasks": true,
     },
     "json-language-server": {
       "binary": {
@@ -69,6 +82,7 @@
     },
   ],
   "project_panel": {
+    "git_status": true,
     "folder_icons": true,
     "file_icons": true,
     "dock": "right",
@@ -92,6 +106,18 @@
   "icon_theme": "Catppuccin Latte",
   "minimap": {
     "show": "always",
+  },
+
+  "languages": {
+    "Python": {
+      "language_servers": [
+        // Disable basedpyright and enable Ty, and otherwise
+        // use the default configuration.
+        "ty",
+        "!basedpyright",
+        "...",
+      ],
+    },
   },
 }
 
