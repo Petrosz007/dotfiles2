@@ -32,6 +32,7 @@ brew "git-delta"    # Even fancier structural code diffs
 brew "htop"         # Process manager
 brew "tree"         # Tree view of the current directory
 brew "jj"           # Jujutsu version control system
+brew "jjui"         # Jujutsu UI
 brew "gpg"          # Signing things
 brew "fd"
 brew "bat"          # cat, but cool
@@ -110,6 +111,7 @@ cask "gcloud-cli"
 cask "hashicorp/tap/hashicorp-vagrant"  # Virtual Machines go brrrr
 cask "parallels"                        # Windows Virtual Machines go brrrrr
 cask "google-drive"                     # Sync those obsidian notes
+cask "sbx"                              # Docker sandbox for LLM agents
 {{- end }}
 
 {{- if eq .location "home" }}

@@ -10,6 +10,8 @@ uv = "latest"
 "pipx:black" = "latest"
 "pipx:isort" = "latest"
 "pipx:flake8" = "latest"
+"pipx:ty" = "latest"
+"pipx:ruff" = "latest"
 
 # Go
 golang = [ "1.26.1" ]
@@ -21,12 +23,18 @@ golangci-lint-langserver = "latest"
 # Lua
 lua-language-server = "latest"
 
+# Rust
+"cargo-binstall" = "latest"
+"cargo:bacon" = "latest"
+
 {{- if eq .location "work" }}
 # Axoflow
 kubectl = "latest"
 stern = "latest"      # k8s log viewer
 krew = "latest"       # kubectl package manager
 k9s = "latest"        # k8s tui
+helm-ls = "latest"    # helm LSP
+duckdb = "latest"     # query things, in-process db cli
 {{- end }}
 
 {{- if eq .location "home" }}
