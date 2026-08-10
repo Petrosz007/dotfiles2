@@ -44,6 +44,7 @@ end
 
 #### PATH
 fish_add_path /opt/homebrew/bin/
+fish_add_path /opt/homebrew/opt/rustup/bin  # rustup components
 
 fish_add_path $HOME/.asdf/shims # asdf
 fish_add_path $HOME/.krew/bin   # krew
@@ -59,6 +60,7 @@ end
 
 #### ENV VARS
 set -gx EDITOR nvim
+set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 if test -e ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
   set -x SSH_AUTH_SOCK ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
