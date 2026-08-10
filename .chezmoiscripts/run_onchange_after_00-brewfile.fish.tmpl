@@ -1,9 +1,8 @@
 #!/usr/bin/env fish
 
 # When the contents of the 'Brewfile' file change, the hash changes, so this script will get executed
-# Brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
-cd ~
-brew bundle install
+# Brewfile hash: {{ include "dot_config/homebrew/Brewfile.tmpl" | sha256sum }}
+brew bundle install --global --no-upgrade
 
 {{- /* Commenting this out, because I don't need synthing anymore
 
