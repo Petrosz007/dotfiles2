@@ -32,7 +32,8 @@ gh pr list --search $output --state all --json number | jq '.[].number' -r | xar
 """, ""]
 
 [ui]
-pager = "delta"
+# pager = "delta"
+pager = ["hunk", "pager"]
 diff-formatter = ":git"
 
 [ui.movement]
