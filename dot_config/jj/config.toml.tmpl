@@ -5,7 +5,7 @@ name = {{ .git.name | quote }}
 email = {{ .git.email | quote }}
 
 [signing]
-behavior = "own"
+behavior = "drop"
 backend = "ssh"
 key = {{ .git.sshSigningKeyPath | quote }}
 backends.ssh.allowed-signers = "~/.gitallowedsigners"

@@ -10,6 +10,11 @@ if status is-interactive
   # JJ completions are only needed in interactive mode
   jj util completion fish | source
 
+  if type -q hirq
+    hirq activate fish 2>/dev/null | source
+    hirq completion fish 2>/dev/null | source
+  end
+
   # Abbreviations
   abbr --add pcd project-cd
   abbr --add k kubectl
@@ -21,8 +26,8 @@ if status is-interactive
 
   abbr --add jjde jj desc
   abbr --add jjgp jj git push
-  abbr --add jjgpan jj git push --allow-new
   abbr --add jjgf jj git fetch
+  abbr --add jjwu jj workspace update-stale
   abbr --add legyen make # LEGYEN TÁNC
 
   {{- if eq .location "work" }}
@@ -34,11 +39,6 @@ end
 #### Sourcing things
 if test -e $HOME/.config/fish/env.fish
   source $HOME/.config/fish/env.fish
-end
-
-if type -q hirq
-  hirq activate fish | source
-  hirq completion fish | source
 end
 
 
