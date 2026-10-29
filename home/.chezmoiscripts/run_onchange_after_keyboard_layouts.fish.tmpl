@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-{{- $keyboardLayoutPath := joinPath .chezmoi.sourceDir "keyboard_layouts" "colemak-dh-wide-macos-iso.keylayout" -}}
+{{- $keyboardLayoutPath := joinPath .chezmoi.sourceDir ".." "keyboard_layouts" "colemak-dh-wide-macos-iso.keylayout" -}}
 
 # When the contents of the keyboard layout file change, the hash changes, so this script will get executed
 # Keyboatd layout hash: {{ include $keyboardLayoutPath | sha256sum }}

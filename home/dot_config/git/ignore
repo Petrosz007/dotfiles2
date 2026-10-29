@@ -17,3 +17,6 @@
 
 # MacOS junk
 .DS_Store
+
+# Claude Code garbage
+**/.claude/.cc-writes/
